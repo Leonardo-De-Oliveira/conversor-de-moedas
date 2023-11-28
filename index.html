@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+    <!--Font Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+
+</head>
+<body>
+    <main>
+        <div class="box-logo">
+            <img src="./assets/logo.png" alt="logo">
+        </div>
+
+        <div class="container">
+            
+            <div class="box">
+
+                <label for="moeda-real">Converter de</label><br>
+                <select id="moeda-real" name="moeda-real">
+                    <option value="Real Brasileiro">Real Brasileiro (R$)</option>
+                </select>
+
+            </div>
+
+            <div class="box">
+
+                <label for="moedas">Converter para</label><br>
+                <select id="moedas" name="moedas">
+                    <option class="moeda-conversao" value="USD-BRL">Dólar Americano (US$)</option>
+                    <option class="moeda-conversao" value="EUR-BRL">Euro (Є)</option>
+                    <option class="moeda-conversao" value="BTC-BRL">Bitcoin</option>
+                </select>
+
+            </div>
+            
+            <div class="box">
+                <p>Valor</p>
+                <input id="real" type="number" placeholder="Insira o valor em Reais">
+            </div>
+
+            <button onclick="converterMoeda()" class="btn">Converter</button>
+
+            <div class="container-box">
+
+                <div class="box-moeda real">
+                    <img src="./assets/brasil.png" alt="logo-Brasil">
+                    <p>Real</p>
+                    <h3 class="valor-selecionado"></h3>
+                </div>
+
+                <img src="./assets/seta.png" alt="seta">
+
+                <div class="box-moeda convertido">
+                    <img id="valor-3" src="./assets/us.png" alt="logo-us">
+                    <p class="valor-1">Dólar Americano</p>
+                    <h3 class="valor-2"></h3>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="./script.js"></script>
+</html>
