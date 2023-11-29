@@ -22,6 +22,9 @@ async function valueCoin() {
 
     let euroBrl = euro.EURBRL.high
     
+    console.log(coin.value)
+    console.log(coin_2.value)
+
     convertCoin(data, euroBrl)
 }
 
@@ -56,7 +59,7 @@ function convertCoin(data, euroBrl){
             resultado = insert / coinSelect
         } 
         else if (coin.value == "BRL-USD" && coin_2.value == "EUR-BRL") {
-            resultado = coinSelect / insert
+            resultado = insert / coinSelect
         } 
         else if (coin_2.value == "BRL-USD" && coin.value == "EUR-BRL"){
             resultado = insert * coinSelect 
