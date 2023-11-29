@@ -24,45 +24,48 @@
             
             <div class="box">
 
-                <label for="moeda-real">Converter de</label><br>
-                <select id="moeda-real" name="moeda-real">
-                    <option value="Real Brasileiro">Real Brasileiro (R$)</option>
+                <label for="coin">Converter de</label><br>
+                <select id="coin" name="coin-real">
+                    <option value="BRL-USD">Real Brasileiro (R$)</option>
+                    <option value="USD-BRL">Dólar Americano ($)</option>
+                    <option value="EUR-BRL">Euro (Є)</option>
+                    
                 </select>
 
             </div>
 
             <div class="box">
 
-                <label for="moedas">Converter para</label><br>
-                <select id="moedas" name="moedas">
-                    <option class="moeda-conversao" value="USD-BRL">Dólar Americano (US$)</option>
-                    <option class="moeda-conversao" value="EUR-BRL">Euro (Є)</option>
-                    <option class="moeda-conversao" value="BTC-BRL">Bitcoin</option>
+                <label for="coin-2">Converter para</label><br>
+                <select id="coin-2" name="coins">
+                    <option value="USD-BRL">Dólar Americano ($)</option>
+                    <option value="EUR-BRL">Euro (Є)</option>
+                    <option value="BRL-USD">Real Brasileiro (R$)</option>
                 </select>
 
             </div>
             
             <div class="box">
                 <p>Valor</p>
-                <input id="real" type="number" placeholder="Insira o valor em Reais">
+                <input id="insert" type="number" placeholder="Digite o valor desejado">
             </div>
 
-            <button onclick="converterMoeda()" class="btn">Converter</button>
+            <button onclick="valueCoin()" class="btn">Converter</button>
 
             <div class="container-box">
 
                 <div class="box-moeda real">
-                    <img src="./assets/brasil.png" alt="logo-Brasil">
-                    <p>Real</p>
-                    <h3 class="valor-selecionado"></h3>
+                    <img id="value-1" src="./assets/brasil.png" alt="logo-Brasil">
+                    <p class="value-2">Real Brasileiro</p>
+                    <h3 class="value-3">R$</h3>
                 </div>
 
                 <img src="./assets/seta.png" alt="seta">
 
                 <div class="box-moeda convertido">
-                    <img id="valor-3" src="./assets/us.png" alt="logo-us">
-                    <p class="valor-1">Dólar Americano</p>
-                    <h3 class="valor-2"></h3>
+                    <img id="value-4" src="./assets/us.png" alt="logo-us">
+                    <p class="value-5">Dólar Americano</p>
+                    <h3 class="value-6">$</h3>
                 </div>
 
             </div>
